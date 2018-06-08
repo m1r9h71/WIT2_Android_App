@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_patient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.wit.medRecord.activities.addPatient">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rdoctor"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/patientName"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:editable="true"
+        android:hint="Enter Patient Name" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/male"
+            android:checked="false"
+            android:textAlignment="viewStart"
+            android:layout_below="@+id/patientName"
+            android:layout_alignEnd="@+id/medication"
+            android:layout_marginEnd="49dp" />
+
+        <RadioButton
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="female"
+            android:id="@+id/Female"
+            android:checked="false"
+            android:textAlignment="viewStart"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/male" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/address"
+        android:textAlignment="center"
+        android:editable="true"
+        android:hint="Please Enter Address"
+        android:layout_above="@+id/illness"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/medication"
+        android:textAlignment="center"
+        android:editable="true"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:hint="Please Enter Medication"
+        android:layout_above="@+id/add"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+
+
+
+
+    <Button
+        android:text="ADD PATIENT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="Enter Age:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:layout_below="@+id/patientName"
+        android:layout_toEndOf="@+id/patientName"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/illness"
+        android:textAlignment="center"
+        android:editable="true"
+        android:hint="Please Enter Illness"
+        android:layout_above="@+id/medication"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <NumberPicker
+        android:id="@+id/agePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/age"/>
+
+</RelativeLayout>

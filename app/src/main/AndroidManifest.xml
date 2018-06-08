@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ie.wit.medRecord">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="MedRecord 2.0"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.LogIn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.DoctorMain"/>
+        <activity android:name=".activities.mainMenu"/>
+        <activity android:name=".activities.addDoctor"/>
+        <activity android:name=".activities.deleteDoctor"/>
+        <activity android:name=".activities.addPatient"/>
+        <activity android:name=".activities.deletePatient"/>
+        <activity android:name=".activities.searchPatient"/>
+        <activity android:name=".activities.listPatients">
+        </activity>
+        <activity
+            android:name=".activities.editPatient"
+            android:label="@string/title_activity_edit_patient"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activities.editDoctor"
+            android:label="@string/title_activity_edit_doctor"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activities.listDoctors">
+        </activity>
+    </application>
+
+</manifest>
